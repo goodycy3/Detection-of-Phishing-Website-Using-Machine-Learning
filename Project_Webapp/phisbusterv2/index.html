@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Phishbuster</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/mainlogo.jpeg" rel="icon">
+  <link href="assets/img/mainlogo.jpeg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">PhishB</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/mainlogo.jpeg" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="usecases.html" target="_blank" rel="no-openner no-referrer">Usecases</a></li>
+          <li class="drop-down"><a href="info.html">Resources</a>
+            <ul>
+              <li class="drop-down"><a href="#">Report Phishing Cases</a>
+                <ul>
+                  <li><a href="https://safebrowsing.google.com/safebrowsing/report_phish/?hl=en">Google Safe
+                      Browsing</a></li>
+                  <li><a href="https://support.google.com/websearch/answer/106318">Google Support</a></li>
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Phishing Websites</a>
+                <ul>
+                  <li><a href="https://www.phishingbox.com/phishing-iq-test">Phishingbox</a></li>
+                  <li><a href="https://www.intradyn.com/phishing-quiz/">Intradyn</a></li>
+                  <!-- <li><a href="https://vadasecure.com/en/blog/anatomy-of-a-phishing-email">Vadasecure</a></li> -->
+                </ul>
+              </li>
+              <!-- <li><a href="#">For Future Reference</a></li> -->
+            </ul>
+          </li>
+          <!-- <li><a href="#">Future Reference</a></li> -->
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="assets/resources/no fall maga cyber security eBook.pdf" class="get-started-btn scrollto"
+        download="nofallmagaguide">Download Guide <i class='bx bxs-download'></i></a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+      <h1>.Phishbuster</h1>
+      <form action="" method="post" role="form" class="form">
+        <div class="row no-gutters">
+          <div class="col-md-6 form-group pr-md-1">
+            <input type="text" name="name" class="form-control" id="name"
+              placeholder="Enter a URL link in format http or https and should contain www">
+          </div>
+        </div>
+        <div class="text-center">
+          <button id="predict" class="btn btn-danger" onclick="predictURL()" type="button">Predict</button>
+          <button id="reset" class="btn btn-primary" onclick="resetPage()" type="button">Reset</button>
+        </div>
+      </form>
+      <img src="assets/img/safe.svg" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+    </div>
+
+  </section><!-- End Hero -->
+
+  <!-- ======= Frequently Asked Questions Section ======= -->
+  <section id="faq" class="faq">
+    <h2 class="text-center"><b>EXTRACTION FEATURES</b></h2>
+    <div class="container" data-aos="fade-up">
+
+      <div class="faq-list">
+        <ul>
+          <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+            <i class="bx bx-help-circle icon-help"></i> <a id="domain" data-toggle="collapse" class="collapse"
+              href="#faq-list-1">Domain <i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+              <p>
+                Domain name system e.g facebook.com, bowen.edu.ng
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="have_ip" data-toggle="collapse" href="#faq-list-2"
+              class="collapsed">Have_IP <i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+              <p>
+                If an IP address is used as an alternative of the domain name in the URL, such as
+                “http://125.98.3.123/fake.html
+
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="have_at" data-toggle="collapse" href="#faq-list-3"
+              class="collapsed">Have_At<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+              <p>
+                Using “@” symbol in the URL leads the browser to ignore everything preceding the “@” symbol and the real
+                address often follows the “@” symbol
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="url_length" data-toggle="collapse" href="#faq-list-4"
+              class="collapsed">URL_Length<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+              <p>
+
+                URL length<54 → feature=Legitimate@ else if URL length≥54 and ≤75 → feature=Suspicious @otherwise→
+                  feature=Phishing </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="url_depth" data-toggle="collapse" href="#faq-list-5"
+              class="collapsed">URL_Depth<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+              <p>
+                Let us assume we have the following link: http://www.hud.ac.uk/students/.) the .ac, .uk, /students are
+                subdomains. Also, if the number of dots is greater than one, then the URL is classified as “Suspicious”
+                since it has one sub domain. However, if the dots are greater than two, it is classified as “Phishing”
+                since it will have multiple sub domains
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="redirection" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Redirection<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                a legitimate websites will be redirected one time max. On the other hand, phishing websites containing
+                this feature have been redirected at least 4 times.
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="http_domain" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">HTTP_DOMAIN<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                The existence of HTTPS is very important in giving the impression of website legitimacy that is if a
+                Website has Https or not
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="tiny_url" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">TinyURL<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                it means a domain name that is short, which links to the webpage that has a long URL. For example, the
+                URL “http://portal.hud.ac.uk/” can be shortened to “bit.ly/19DXSk4”.} which can be Phishing
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="pre_suf" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Prefix/Suffix<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                Phishers tend to add prefixes or suffixes separated by (-) to the domain name so that users feel that
+                they are dealing with a legitimate webpage. For example http://www.Confirme-paypal.com/
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="dns_record" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">DNS_Record<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                If the DNS record is empty or not found then the website is classified as “Phishing”, otherwise it is
+                classified as “Legitimate”.
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="web_traffic" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Web_Traffic<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                If the DNS record is empty or not found then the website is classified as “Phishing”, otherwise it is classified as “Legitimate”. 
+                if the domain has no traffic or is not recognized by the Alexa database, it is classified as “Phishing”. Otherwise, it is classified as “Suspicious
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="domain_age" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Domain_Age<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                Most phishing websites live for a short period of time. By reviewing our dataset, we find that the minimum age of the legitimate domain is 6 months. }
+                (Age Of Domain≥6 months → Legitimate@Otherwise → Phishing)
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="domain_end" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Domain_End<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                (Domain Registration Length)
+                █(Domains Expires on≤ 1 years → Phishing@Otherwise→ Legitimate)                
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="iframe" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">iFrame<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                IFrame is an HTML tag used to display an additional webpage into one that is currently shown. Phishers can make use of the “iframe” tag and make it invisible }
+                {(Using iframe→ Phishing@Otherwise → Legitimate)                             
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="mouse_over" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Mouse_Over<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                {Phishers may use JavaScript to show a fake URL in the status bar to users. To extract this feature, we must dig-out the webpage source code, particularly the “onMouseOver” event, and check if it makes any changes on the status bar. }
+                Rule: IF{█(onMouseOver Changes Status Bar→ Phishing@It Does't Change Status Bar→Legitimate)                    
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="right_click" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Right_Click<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                Phishers use JavaScript to disable the right-click function, so that users cannot view and save the webpage source code. This feature is treated exactly as “Using onMouseOver to hide the Link”. Nonetheless, for this feature, we will search for event “event.button==2” in the webpage source code and check if the right click is disabled. 
+                Rule: IF{(Right Click Disabled → Phishing @Otherwise→Legitimate)
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a id="web_forwards" data-toggle="collapse" href="#faq-list-6"
+              class="collapsed">Web_Forwards<i class="bx bx-chevron-down icon-show"></i><i
+                class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-6" class="collapse" data-parent=".faq-list">
+              <p>
+                Submitting Information to Email
+                Web form allows a user to submit his personal information that is directed to a server for processing. A phisher might redirect the user’s information to his personal email. To that end, a server-side script language might be used such as “mail()” function in PHP. One more client-side function that might be used for this purpose is the “mailto:” function. 
+                (Using ""mail()\" or \"mailto:\" Function to Submit User Information" → Phishing@Otherwise  → Legitimate)
+              </p>
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->
+
+  <main id="main">
+
+    <!-- ======= about Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Phishbuster</h2>
+          <p>Phishbuster is a project that came into existence from a final year project “Detection of Phishing Website
+            Using Machine Learning” carried out at Bowen University.
+            It aims to help reduce phishing attack by helping internet users authenticate URL link by testing if it is
+            phishing or legitimate. The progress of validating a Website URL for phishing or legitimate has gone through
+            several Machine learning models.
+          </p>
+
+          <h3>About the Author</h3>
+          <p>The Author of this Research is Adediran Goodness who is a Final Year Student of Computer Science and
+            Information Technology at Bowen University who aspire to further his Career into Cyber Security. </p>
+        </div>
+
+      </div>
+    </section><!-- End about Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <p>
+              <iframe width="400" height="409" src="https://www.youtube.com/embed/PWVN3Rq4gzw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <iframe width="400" height="409" src="https://www.youtube.com/embed//xuYoMs6CLEw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-md-flex py-4">
+
+      <div class="text-center text-md-center">
+        <div class="copyright">
+          <img src="assets/img/google.png" alt="">
+          <a href="https://phishingquiz.withgoogle.com/" class="get-started-btn scrollto">Take a Phishing Test by
+            GOOGLE</a> <br>
+            <hr/> <a href="assets/resources/my_work.7Z" class="get-started-btn scrollto" download="my_work">Project Work <i class='bx bxs-download'></i></a>
+          <p style="padding-top: 8px; font-weight: 600;">Final Year Project &copy; 2021.All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function predictURL() {
+      var url = document.getElementById("name").value;
+      if (url == "") {
+        alert("ENTER A URL");
+      } else {
+        if (url.includes("http") && url.includes("www")) {
+          document.getElementById("predict").innerHTML = "Predicting ..."
+
+          fetch("http://127.0.0.1:8000/predict/", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              url: url
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.success) {
+                document.getElementById("predict").innerHTML = "Predicted"
+                document.getElementById("predict").class = "btn btn-success"
+                // DOMAIN
+                document.getElementById("domain").innerHTML += `<span class="badge badge-primary" style="margin-left: 20px;">${data.detection[0]}</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                // URL DEPTH
+                document.getElementById("url_depth").innerHTML += `<span class="badge badge-primary" style="margin-left: 20px;">has ${data.detection[4]} Subfolder</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                if (data.detection[4] > 1) {
+                  document.getElementById("url_depth").innerHTML += `<span class="badge badge-warning" style="margin-left: 20px;">Suspension</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+                if (data.detection[4] > 2) {
+                  document.getElementById("url_depth").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+
+                }  else {
+                  document.getElementById("url_depth").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+
+
+
+
+
+                // OTHERS
+                if (data.detection[1] == 0) {
+                  document.getElementById("have_ip").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("have_ip").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+
+                if (data.detection[2] == 0) {
+                  document.getElementById("have_at").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("have_at").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+
+                if (data.detection[3] == 0) {
+                  document.getElementById("url_length").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("url_length").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+
+                if (data.detection[5] == 0) {
+                  document.getElementById("redirection").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("redirection").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+
+                if (data.detection[6] == 0) {
+                  document.getElementById("http_domain").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("http_domain").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+                if (data.detection[7] == 0) {
+                  document.getElementById("tiny_url").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("tiny_url").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+                if (data.detection[8] == 0) {
+                  document.getElementById("pre_suf").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("pre_suf").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+                
+                if (data.detection[9] == 0) {
+                  document.getElementById("dns_record").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("dns_record").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                }
+
+                if (data.detection[10] == 0) {
+                  document.getElementById("web_traffic").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("web_traffic").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+
+                if (data.detection[11] == 0) {
+                  document.getElementById("domain_age").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("domain_age").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+
+                if (data.detection[12] == 0) {
+                  document.getElementById("domain_end").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("domain_end").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+
+                if (data.detection[13] == 0) {
+                  document.getElementById("iframe").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("iframe").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+
+                if (data.detection[14] == 0) {
+                  document.getElementById("mouse_over").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("mouse_over").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+
+                if (data.detection[15] == 0) {
+                  document.getElementById("right_click").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("right_click").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+
+                if (data.detection[16] == 0) {
+                  document.getElementById("web_forwards").innerHTML += `<span class="badge badge-success" style="margin-left: 20px;">Legit</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+
+                } else {
+                  document.getElementById("web_forwards").innerHTML += `<span class="badge badge-danger" style="margin-left: 20px;">Phishing</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>`
+                }
+                
+
+
+              }
+            })
+            .catch((err) => console.log(err));
+        } else {
+          alert("URL MUST CONTAIN WWW AND HTTPS OR HTTP");
+        }
+      }
+
+
+
+    }
+    function resetPage() {
+      console.log("HELLO");
+      location.reload();
+    }
+  </script>
+
+</body>
+
+</html>
