@@ -10,7 +10,7 @@ The set of phishing URLs are collected from opensource service called **PhishTan
 **legitimate URL Dataset**
 The legitimate URLs are obatined from the open datasets of the University of New Brunswick, https://www.unb.ca/cic/datasets/url-2016.html. This dataset has a collection of benign, spam, phishing, malware & defacement URLs. Out of all these types, the benign url dataset is considered for this project. From this dataset, 5000 random legitimate URLs are collected to train the ML models.
 
-The above mentioned datasets are uploaded to (https://github.com/goodydeves/PhishBuster/tree/master/ML%20work/DataSets)' folder of this repository.
+The above-mentioned datasets are uploaded to (https://github.com/goodydeves/PhishBuster/tree/master/ML%20work/DataSets)' folder of this repository.
 
 ## Feature Extraction
 The below mentioned category of features are extracted from the URL data:
@@ -44,31 +44,32 @@ All these models are trained on the dataset and evaluation of the model is done 
 ### **NOTE** ###
 The model XGBoost has the highest accuracy and also The listed (feature extraction) to validate URLs were integrated to a webapplication using django framework to effeciently detect phishing URL links.
 
-**Tools Used**
-->Jupyter notebook 
-->Pycharm 
-->Postman
-->Chrom Browser 
+**Tools Used** <br>
+💡 Jupyter notebook <br>
+💡 Pycharm <br>
+💡 Postman <br>
+💡 Chrom Browser <br> 
 
 
-->>> Presentation
+# Presentation
 
-The short video presentaion for this project named "Project Summary.mp4"
-The slide presentaion for this project is named "presentation slides.ppt" 
-The Write-up Documentation for this project is named "Chapter 1-5 DETECTING PHISHING WEBSITES USING MACHINE LEARNING.pdf"
-
-
-
--> Webapplication 
-I created a Web application named "Phishbuster" to help Users Validate Website Links. Name of folder is "Project_Webapp.7z" 
+📍 The short video presentation for this project is named "Project Summary.mp4" <br>
+📍 The slide presentation for this project is named "presentation slides.ppt" <br>
+📍 The Write-up Documentation for this project is named "Chapter 1-5 DETECTING PHISHING WEBSITES USING MACHINE LEARNING.pdf"
 
 
--> ML work 
-The ML work folder consist of "Dataset" and "Jupyter notebook of the project" as stated above 
-** Phishing Website Detection Training & Testing Models on Datasets.ipynb **
-** URL_Feature_Extraction_from_Datasets.ipynb **
 
--> Next Steps
-This project can be further extended to creation of browser extention (for chrome, brave, opera mini etc) to help Users by adding it to browser extension to detect Phishing URLs .
+# Web application 
+I created a Web application named <a href="https://phish-buster.vercel.app/">Phishbuster</a> to help Users Validate Website Links. The name of the folder is <b>"Project_Webapp.7z"</b> 
+NOTE: The website isn't linked to the ML functionality. But you can check the Project Video.
+
+
+# ML work 
+The ML work folder consists of "Dataset" and "Jupyter Notebook of the project" 
+**Phishing Website Detection Training & Testing Models on Datasets.ipynb**
+**URL_Feature_Extraction_from_Datasets.ipynb**
+
+# Next Steps
+This project can be further extended to the creation of browser extensions (for Chrome, brave, opera mini etc) to help Users by adding to the browser extension to detect Phishing URLs.
 
 
