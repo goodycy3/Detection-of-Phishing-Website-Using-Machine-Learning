@@ -72,4 +72,9 @@ The ML work folder consists of "Dataset" and "Jupyter Notebook of the project"
 # Next Steps
 This project can be further extended to the creation of browser extensions (for Chrome, brave, opera mini etc) to help Users by adding to the browser extension to detect Phishing URLs.
 
+Copyright (c) 2021 Goodness Adediran
 
+All rights reserved.  
+No part of this software, including source code or documentation, may be reproduced,
+distributed, performed, displayed, or transmitted in any form or by any means, without
+the prior written permission of the copyright holder.
